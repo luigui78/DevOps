@@ -1,0 +1,9 @@
+stages:
+ - setup
+
+setup_job:
+ stage: setup
+ script:
+  - echo "iniciando fase de setup…"
+  - echo  "preparando entorno de CI..."
+  - echo "Setup completado correctamente"
