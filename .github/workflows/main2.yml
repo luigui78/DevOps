@@ -1,0 +1,23 @@
+stages:
+    - lint
+    - test
+    - build
+lint_job:
+    stage: lint
+    script:
+        - echo "revisando estilo..."
+        - echo "Lint OK"
+test_job:
+    stage: test
+    script: 
+        - echo "Ejecutando tests..."
+        - echo "Tests OK"
+build_job:
+    stage: build   
+    script: 
+        - echo "Generando build..."
+        - mkdir build
+        - echo "archivo" > build/output.txt
+    artifacts:
+        paths:
+            - build/
